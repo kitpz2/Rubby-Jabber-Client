@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>new (UI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File ui.rb, line 5</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+        <span class="ruby-ivar">@uzytkownik</span>=<span class="ruby-constant">Brzus</span>.<span class="ruby-identifier">new</span>  
+        <span class="ruby-keyword kw">begin</span>
+                <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Podaj nazwe konta(jid@serwer[/zasob]): &quot;</span>
+                <span class="ruby-ivar">@jid</span>=<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-identifier">print</span> <span class="ruby-value str">&quot;Podaj haslo: &quot;</span>
+                <span class="ruby-ivar">@haslo</span>=<span class="ruby-identifier">gets</span>.<span class="ruby-identifier">strip</span>
+                <span class="ruby-identifier">p</span> <span class="ruby-value str">&quot;Prosze czekac, trwa laczenie...&quot;</span>
+                <span class="ruby-ivar">@uzytkownik</span>.<span class="ruby-identifier">loguj</span>(<span class="ruby-ivar">@jid</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'\n'</span>)[<span class="ruby-value">0</span>],<span class="ruby-ivar">@haslo</span>)
+        <span class="ruby-keyword kw">rescue</span>
+                <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Błąd przy logowaniu!&quot;</span>
+                <span class="ruby-identifier">exit</span>
+        <span class="ruby-keyword kw">end</span>
+        <span class="ruby-identifier">odbierz</span>
+        <span class="ruby-ivar">@rozmowa</span>=<span class="ruby-value">0</span>
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

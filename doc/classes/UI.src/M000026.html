@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>pomoc (UI)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File ui.rb, line 238</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pomoc</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Polecenie\t argumenty\t &lt;opcjonalne argumenty&gt;\t\t -\t opis:&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;help/?/pomoc\t\t\t\t\t\t  -\twyświetla pomoc&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;sms\t [JID] ]tresc]\t\t\t\t       -\twysyła pojedynczą wiadomość do [JID]&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;rozmowa\t\t [JID]\t\t\t\t\t       -\trozpoczyna rozmowę z [JID], aby ją zakończyć należy wpisać !koniec&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;!koniec\t\t\t\t\t\t\t     -\twychodzi z rozmowy (tylko podczas rozmowy)&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;dodaj\t\t [JID]\t\t\t\t\t         -\tdodaje [JID] do listy kontaktów (prosząc automatycznie o subskrypcję)&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;usun\t\t [JID]\t\t\t\t\t  -\tusuwa [JID] z listy znajomych (usuwa subskrypcję)&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;usun_s\t\t [JID]\t\t\t\t\t        -\tusuwa subskrypcje dla [JID] (bez usuwania z listy znajomych)&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;usun_bez_s\t [JID]\t\t\t\t\t      -\tusuwa [JID] z listy znajomych (bez usuwania subskrypcji)&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;akceptuj\t [JID]\t\t\t\t\t        -\takceptuje prośbę [JID] o subskrypcje&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;odrzuc\t\t [JID]\t\t\t\t\t        -\todmawia subskrypcji [JID]&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;lista\t\t\t\t\t\t\t       -\tpokazuje liste znajomych&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;status\t\t [nowy_status]\t &lt;nowy_opis&gt;\t\t\t -\t ustawia status na podany wraz z opisem. \n\tLista dostepnych statusow: &quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\t\tdostepny     - Dostępny&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\t\tchetny       - Chętny do rozmowy&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\t\tnp           - Nie przeszadzac&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\t\tzw           - Zaraz wracam&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;\t\tniewidoczny - Niewidoczny&quot;</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;koniec\t\t\t\t\t\t\t      -\t wychodzi z programu\n\n&quot;</span>
+
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

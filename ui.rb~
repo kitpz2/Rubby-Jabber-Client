@@ -107,8 +107,8 @@ class UI
 					  if polecenie.length==2 then historia(polecenie[1]) else blad end
 			when "rozmowa":  
 				      if polecenie.length==2 then @rozmowa=1; rozmowa(polecenie[1]) else	blad end
-			when "sms": 
-					  if polecenie.length>2 then sms(polecenie) else blad end
+			when "wiadomosc": 
+					  if polecenie.length>2 then wiadomosc(polecenie) else blad end
 			when "koniec": 
 				       return false
 			when "status": 
@@ -219,9 +219,9 @@ class UI
 	end
 	puts plik.read
   end
-#Wysyla pojedynczą wiadomość
+#Wysyla wiadomosc
 #slowa: [Array] - slowa[0] - polecenie, slowa[1] - uzytkownik, slowa[2..] - wiadomosc
-  def sms(slowa)
+  def wiadomosc(slowa)
 	jid=JID::new(slowa[1])
 	i=0
 	do_wyslania=String.new("")
@@ -238,7 +238,7 @@ class UI
   def pomoc
 	puts "Polecenie\t argumenty\t <opcjonalne argumenty>\t\t -\t opis:"
 	puts "help/?/pomoc\t\t\t\t\t\t	 -\twyświetla pomoc"
-	puts "sms\t [JID] ]tresc]\t\t\t\t	 -\twysyła pojedynczą wiadomość do [JID]"
+	puts "wiadomosc\t [JID] ]tresc]\t\t\t\t	 -\twysyła wiadomość do [JID]"
 	puts "rozmowa\t\t [JID]\t\t\t\t\t	 -\trozpoczyna rozmowę z [JID], aby ją zakończyć należy wpisać !koniec"
 	puts "!koniec\t\t\t\t\t\t\t	 -\twychodzi z rozmowy (tylko podczas rozmowy)"
 	puts "dodaj\t\t [JID]\t\t\t\t\t	 -\tdodaje [JID] do listy kontaktów (prosząc automatycznie o subskrypcję)"
